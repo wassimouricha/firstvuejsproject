@@ -20,7 +20,7 @@
 }
 .card .card-footer button {
   border: none;
-  background: linear-gradient(45deg, #fd267a, #ff6036);
+  background: linear-gradient(45deg, #fd267a, #b68e83);
   color: white;
   padding: 0.5rem 2rem;
   cursor: pointer;
@@ -39,4 +39,24 @@
 .col {
   width: 25%;
   padding: 10px;
+}
+
+.comments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.comments .commentsList {
+  margin-top: 1rem;
+}
+.comments form {
+  width: 100%;
+}
+.comments input {
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  width: 100%;
+  padding: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
