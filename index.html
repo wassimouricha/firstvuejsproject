@@ -20,8 +20,8 @@
                         <p class="card-txt">{{ post.body }}</p>
                     </div>
                     <div class="card-footer">
-                        <button>Like</button>
-                        <span>0 like</span>
+                        <button v-on:click="addLike(post)">Like</button>
+                        <span>{{ post.likes ? post.likes : "0"}} Like{{post.likes && post.likes > 1 ? "s" : ""}} </span>
                     </div>
                    
                 </div>
@@ -48,6 +48,15 @@
 
                    ]
                 }
+                },
+                methods: {
+                    addLike(post) {
+                        if(post.likes) {
+                            post.likes++
+                        } else {
+                            post.likes = 1
+                        }
+                    }
                 },
                 mounted() {
                     fetch('https://jsonplaceholder.typicode.com/posts')
